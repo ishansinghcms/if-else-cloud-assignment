@@ -1,0 +1,16 @@
+<div class="confirmation-overlay">
+  <div class="confirmation-dialog">
+    <div class="message">
+      Are you sure you wan to edit the following user?
+      <p class="edit-user-name">{{ name }}</p>
+      <p class="no-functionality-text">
+        Below buttons have no functionality. They will just close this dialog
+        box.
+      </p>
+    </div>
+    <div class="buttons">
+      <button class="yes" (click)="confirmEdit(true)">Yes</button>
+      <button class="no" (click)="confirmEdit(false)">No</button>
+    </div>
+  </div>
+</div>

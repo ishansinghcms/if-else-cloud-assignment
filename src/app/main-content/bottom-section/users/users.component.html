@@ -1,0 +1,143 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="check-width checkbox">
+        <input
+          type="checkbox"
+          id="html"
+          [(ngModel)]="selectAll"
+          (change)="toggleAllCheckboxes()"
+        />
+      </th>
+      <th class="name">{{ heading[0] }}</th>
+      <th class="status">
+        {{ heading[1] }} &nbsp;<fa-icon [icon]="faArrowDown"></fa-icon>
+      </th>
+      <th class="role">
+        {{ heading[2] }} &nbsp;<fa-icon [icon]="faQuestionCircle"></fa-icon>
+      </th>
+      <th class="email">{{ heading[3] }}</th>
+      <th class="teams">{{ heading[4] }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let data of grid_data; let i = index"
+      (mouseenter)="hoveredRowIndex = i"
+      (mouseleave)="hoveredRowIndex = -1"
+      [ngStyle]="hoveringRow(i)"
+    >
+      <td class="checkbox-td">
+        <input
+          type="checkbox"
+          id="html"
+          [(ngModel)]="rowCheckboxes[i]"
+          (change)="updateSelectAll()"
+        />
+      </td>
+      <td class="name-content">
+        <div class="face-icon">
+          <img
+            src="https://as2.ftcdn.net/v2/jpg/02/23/50/73/1000_F_223507324_jKl7xbsaEdUjGr42WzQeSazKRighVDU4.jpg"
+            alt="Icon"
+          />
+        </div>
+        <div class="name-handle">
+          <div class="full-name">
+            {{ data["name"]["first_name"] }} {{ data["name"]["last_name"] }}
+          </div>
+          <div class="handle">{{ data["name"]["handle"] }}</div>
+        </div>
+      </td>
+      <td class="status-td">
+        <button
+          [ngClass]="{
+            'status-button-customer': data['status'] === 'Customer',
+            'status-button-churned': data['status'] === 'Churned'
+          }"
+        >
+          <div class="center-vertically">
+            <fa-icon class="dot-icon" [icon]="faCircle"></fa-icon>
+            <span>{{ data["status"] }}</span>
+          </div>
+        </button>
+      </td>
+      <td class="role-content">{{ data["role"] }}</td>
+      <td class="progress-td">
+        <div class="progress-centering">
+          <div class="progress-container">
+            <div class="progress full-progress"></div>
+            <div
+              class="progress variable-progress"
+              [style.width]="data['license_used'] + '%'"
+            ></div>
+          </div>
+          <div class="percentage">{{ data["license_used"] }}%</div>
+        </div>
+      </td>
+      <td class="teams-td">
+        <div class="teams-centering">
+          <div class="left-content">
+            <button
+              class="button-padding teams-button"
+              *ngFor="let team of data['teams']"
+              [style.backgroundColor]="team['background_color']"
+              [style.color]="team['text_color']"
+            >
+              {{ team["value"] }}
+            </button>
+          </div>
+          <div class="right-content">
+            <fa-icon
+              (click)="handleDelete(data['id'])"
+              class="table-icon"
+              [icon]="faTrash"
+            ></fa-icon>
+            <fa-icon
+              (click)="handleEdit(data['id'])"
+              class="table-icon"
+              [icon]="faPen"
+            ></fa-icon>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="pagination">
+  <button
+    class="side-button"
+    (click)="previousPage()"
+    [disabled]="currentPage === 1"
+  >
+    <fa-icon class="table-icon" [icon]="faArrowLeft"></fa-icon> Previous
+  </button>
+  <div class="center-buttons">
+    <button
+      [ngStyle]="combineStyles(page)"
+      *ngFor="let page of getPages()"
+      (click)="goToPage(page)"
+    >
+      {{ page }}
+    </button>
+  </div>
+  <button
+    class="side-button"
+    (click)="nextPage()"
+    [disabled]="currentPage === totalPages"
+  >
+    Next <fa-icon class="table-icon" [icon]="faArrowRight"></fa-icon>
+  </button>
+</div>
+
+<app-confirmation-dialog
+  (confirmed)="handleDeleteConfirmation($event)"
+  *ngIf="showConfirmationDialog"
+  [name]="deleteUserName"
+></app-confirmation-dialog>
+
+<app-edit-dialog
+  (confirmed)="handleEditConfirmation($event)"
+  *ngIf="showEditDialog"
+  [name]="editUserName"
+></app-edit-dialog>

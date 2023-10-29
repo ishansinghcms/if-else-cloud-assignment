@@ -1,0 +1,33 @@
+<div class="pie-charts-container">
+  <div class="top-pie-charts-content">
+    <div class="top-left-content">
+      <h3>Vendors monitored</h3>
+      <p>You're using 80% of available spots.</p>
+    </div>
+    <div class="top-right-content"><fa-icon [icon]="i1"></fa-icon></div>
+  </div>
+  <div class="middle-pie-charts-content">
+    <div class="middle-left-pie-charts-content">
+      <div class="middle-top">
+        <div class="background-chart">
+          <app-pie-chart-background></app-pie-chart-background>
+        </div>
+        <div class="foreground-chart">
+          <app-pie-chart></app-pie-chart>
+        </div>
+        <div class="pie-chart-text">240</div>
+      </div>
+      <div class="middle-bottom">
+        <b class="bold-text">You've reached your limit</b>
+        <p>You've used 80% of your available spots.</p>
+        <p>Upgrade plan to monitor more vendors.</p>
+      </div>
+    </div>
+    <div class="middle-right-pie-charts-content">
+      <fa-icon [icon]="i2"></fa-icon> 10%
+    </div>
+  </div>
+  <div class="bottom-pie-charts-content">
+    <button class="bottom-pie-charts-button">Upgrade plan</button>
+  </div>
+</div>

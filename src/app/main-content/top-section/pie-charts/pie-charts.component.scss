@@ -1,0 +1,114 @@
+$border-radius: 8px;
+$border-color: #f4f4f7;
+$p-color: #808286;
+
+.pie-charts-container {
+  position: relative;
+  height: 264px;
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+  padding-bottom: 130px;
+  margin-left: 40px;
+
+  .top-pie-charts-content {
+    border-bottom: 2px solid $border-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 17px;
+    .top-left-content {
+      h3 {
+        padding: 0;
+        margin: 0;
+      }
+
+      p {
+        padding-top: 5px;
+        margin: 0;
+        font-size: 14px;
+        color: $p-color;
+      }
+    }
+
+    .top-right-content {
+      color: #a2a4a8;
+      font-size: 13px;
+      cursor: pointer;
+    }
+  }
+  .middle-pie-charts-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px;
+    border-bottom: 2px solid $border-color;
+
+    .middle-left-pie-charts-content {
+      .middle-top {
+        .pie-chart-text {
+          position: absolute;
+          top: 160px;
+          left: 110px;
+          font-weight: bold;
+          font-size: 28px;
+        }
+        .background-chart,
+        .foreground-chart {
+          position: absolute;
+          top: 0;
+          left: 30px;
+        }
+
+        .background-chart {
+          z-index: 1;
+        }
+
+        .foreground-chart {
+          z-index: 2;
+        }
+      }
+
+      .middle-bottom {
+        padding: 140px 0 10px 10px;
+
+        .bold-text {
+          font-weight: bold;
+        }
+
+        b {
+          font-size: 17px;
+        }
+        p {
+          padding: 1px 0 0 0;
+          margin: 0;
+          font-size: 14px;
+          color: $p-color;
+        }
+      }
+    }
+
+    .middle-right-pie-charts-content {
+      color: #5ca173;
+      padding-right: 5px;
+    }
+  }
+
+  .bottom-pie-charts-content {
+    text-align: right;
+    padding: 15px;
+
+    .bottom-pie-charts-button {
+      padding: 7px 10px 7px 10px;
+      border: solid #e6e8ec 2px;
+      border-radius: $border-radius;
+      background-color: #ffffff;
+      color: #565e6d;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f3f3f3;
+        border-radius: $border-radius;
+        color: #5c6473;
+      }
+    }
+  }
+}

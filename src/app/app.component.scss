@@ -1,0 +1,23 @@
+$background_color: #ffffff;
+$sidebar-color: #586170;
+
+.container {
+  display: flex;
+  height: 97vh;
+
+  .sidebar {
+    flex: 0 0 3%;
+    background-color: $background_color;
+    color: $sidebar-color;
+    padding: 10px;
+    position: fixed;
+    z-index: 9999;
+  }
+
+  .main-content {
+    flex: 1;
+    background-color: $background_color;
+    margin-left: 75px;
+    padding: 0 10px;
+  }
+}
