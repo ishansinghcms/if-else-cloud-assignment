@@ -1,27 +1,24 @@
-# IfElseCloudAssignment
+Steps to run in local environment-
+* git clone git@github.com:ishansinghcms/if-else-cloud-assignment.git
+* cd if-else-clod-assignment
+* npm install
+* ng serve
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+deployed application- https://poetic-naiad-006474.netlify.app/
 
-## Development server
+development process-
+* used angular 14.2.13 for developing this project
+* sidebar- developed using HTML, CSS
+* bar chart- developed using HTML, CSS
+* pie chart- developed using D3.js
+* progress bar- developed using HTML, CSS
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+features-
+* all the data except the bottom table is static
+* contents of table are dynamic and are read from an API provided within the assignment link- https://ifelsecloud.com/join-modern-manufacturing-world
+* dynamic data includes- table headings, each table row contents, button colors used within each table row, progress-bar progress value
+* added pagination with 10 rows of table at a single page
+* delete button within each row works and it also refreshes the pagination after an item is deleted
+* edit button only provides functionality mentioned in the assignment link
+* styling is written in SCSS format as was mentioned in the assignment link
+* colors, font-size, font-weight, font-style are adhered to the UI provided in the assignment link 
