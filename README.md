@@ -22,3 +22,10 @@ features-
 * edit button only provides functionality mentioned in the assignment link
 * styling is written in SCSS format as was mentioned in the assignment link
 * colors, font-size, font-weight, font-style are adhered to the UI provided in the assignment link 
+
+screenshots-
+
+![Screenshot (82)](https://github.com/ishansinghcms/if-else-cloud-assignment/assets/66079152/c2a700de-3215-4955-8d96-5e14decb11f7)
+
+![Screenshot (83)](https://github.com/ishansinghcms/if-else-cloud-assignment/assets/66079152/62d9f9b7-80d1-40c5-add4-cd96a50c7b78)
+
