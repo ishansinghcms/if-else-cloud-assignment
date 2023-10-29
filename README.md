@@ -1,6 +1,6 @@
 Steps to run in local environment-
 * git clone git@github.com:ishansinghcms/if-else-cloud-assignment.git
-* cd if-else-clod-assignment
+* cd if-else-cloud-assignment
 * npm install
 * ng serve
 
