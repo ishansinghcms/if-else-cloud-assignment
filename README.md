@@ -12,6 +12,7 @@ development process-
 * bar chart- developed using HTML, CSS
 * pie chart- developed using D3.js
 * progress bar- developed using HTML, CSS
+* everything else- developed using HTML, CSS and Angular
 
 features-
 * all the data except the bottom table is static
