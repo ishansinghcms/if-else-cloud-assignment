@@ -38,7 +38,7 @@ screenshots-
 **DELETE BUTTON ACTION**
 ![Screenshot (84)](https://github.com/ishansinghcms/if-else-cloud-assignment/assets/66079152/f009f3e9-ba88-42f9-aa79-0a8ee69a16a1)
 
-**EDIT BUTTON ACTION**_
+**EDIT BUTTON ACTION**
 ![Screenshot (85)](https://github.com/ishansinghcms/if-else-cloud-assignment/assets/66079152/f7723a6e-118b-4b95-9edb-f57c3c0342d0)
 
 
