@@ -15,6 +15,7 @@ development process-
 * everything else- developed using HTML, CSS and Angular
 
 features-
+* the UI works perfectly for the resolution 1920 X 1080 pixels
 * all the data except the bottom table is static
 * contents of table are dynamic and are read from an API provided within the assignment link- https://ifelsecloud.com/join-modern-manufacturing-world
 * dynamic data includes- table headings, each table row contents, button colors used within each table row, progress-bar progress value
